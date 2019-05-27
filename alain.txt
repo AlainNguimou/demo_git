@@ -2,3 +2,40 @@ CECI EST UN AUTRE FICHIER TXT
 
 une autre modification. Je suis vraiment heureux de decouvrir git et github.
 
+fonction qui calcule le pgcd de deux nombre
+
+int main()
+{
+	int nombre1;
+	int nombre2;
+	int resultat;
+
+	cout << "***** pgcd*****" << endl << endl;
+
+	cout << "Entrer le premier nombre: " << endl;
+	cin >> nombre1;
+
+	cout << "Entrer le deuxieme nombre: " << endl;
+	cin >> nombre2;
+
+	resultat = calculerPgcd(nombre1, nombre2);
+	cout <<"le pgcd de "<<nombre1<<" et de "<<nombre2<<" est "<<resultat << endl;
+
+	system("pause");
+	return 0;
+
+}
+
+int calculerPgcd(int nombre1, int nombre2)
+{
+	if (nombre1 % nombre2 == 0)
+	{
+		return nombre2;
+	}
+	else
+	{
+		return calculerPgcd(nombre2, nombre1 % nombre2);
+	}
+	
+}
+
