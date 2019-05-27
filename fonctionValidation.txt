@@ -1,0 +1,23 @@
+
+voici une fonction de validation d'un nombre entier efficace 
+
+int validerNombreEntier(int min, int max)
+{
+	int nombreEntier = 0;
+
+	cin >> nombreEntier;
+
+
+	while (!cin || (nombreEntier < min) ||( nombreEntier > max))
+	{
+		cin.sync();
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	
+		cout << "votre entree est incorrecte, S.V.P reessayez : ";
+		cin >> nombreEntier;
+
+	}
+
+	return nombreEntier;
+}
